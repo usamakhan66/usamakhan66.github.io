@@ -8,6 +8,55 @@
         html {
             scroll-behavior: smooth;
         }
+        /* Sticky Navigation Bar Styling */
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(5px); /* Adds a slight blur effect behind the nav */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .nav-brand {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Prevents the sticky nav from hiding section titles */
+        section {
+            scroll-margin-top: 80px; 
+        }
         :root {
             --primary-color: #2563eb;
             --bg-color: #f8fafc;
@@ -51,6 +100,19 @@
     </style>
 </head>
 <body>
+    
+    <nav class="sticky-nav">
+        <div class="nav-container">
+            <a href="#" class="nav-brand">Usama</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <header>
         <h1>Muhammad Usama Bin Asif </h1>
